@@ -23,7 +23,7 @@ jobs:
       - uses: actions/setup-python@v2
         name: Install Python
         with:
-          python-version: '3.8'
+          python-version: '3.10'
 
       - name: Prepare compiler environment for Windows
         if: runner.os == 'Windows'
@@ -40,7 +40,7 @@ jobs:
         env:
           CIBW_MANYLINUX_X86_64_IMAGE: quay.io/pypa/manylinux2010_x86_64:latest
           CIBW_MANYLINUX_I686_IMAGE: quay.io/pypa/manylinux2010_i686:latest
-          CIBW_BUILD: cp36-* cp37-* cp38-* cp39-*
+          CIBW_BUILD: cp36-* cp37-* cp38-* cp39-* cp310-* cp311-*
           CIBW_SKIP: "*-win32"
           CIBW_BEFORE_ALL_LINUX: >
             yum -y -q --enablerepo=extras install epel-release
@@ -48,7 +48,7 @@ jobs:
           CIBW_REPAIR_WHEEL_COMMAND_LINUX: "auditwheel show {wheel} && auditwheel repair -w {dest_dir} {wheel}"
           CIBW_BEFORE_ALL_MACOS: >
             brew install re2 pybind11 ninja
-          CIBW_ENVIRONMENT_MACOS: MACOSX_DEPLOYMENT_TARGET=10.09
+          CIBW_ENVIRONMENT_MACOS: MACOSX_DEPLOYMENT_TARGET=10.15
           CIBW_REPAIR_WHEEL_COMMAND_MACOS: "pip uninstall -y delocate && pip install git+https://github.com/Chia-Network/delocate.git && delocate-listdeps {wheel} && delocate-wheel -w {dest_dir} -v {wheel}"
           CIBW_BEFORE_ALL_WINDOWS: >
             vcpkg install re2:x64-windows
@@ -71,7 +71,7 @@ jobs:
       - uses: actions/setup-python@v2
         name: Install Python
         with:
-          python-version: '3.7'
+          python-version: '3.10'
 
       - name: Build sdist
         run: |
