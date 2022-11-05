@@ -1,56 +1,13 @@
-===============================================================
- pyre2: Python RE2 wrapper for linear-time regular expressions
-===============================================================
+Maintainer's Note
+=================
 
-.. image:: https://github.com/andreasvc/pyre2/workflows/Build/badge.svg
-    :target: https://github.com/andreasvc/pyre2/actions?query=workflow:Build
-    :alt: Build CI Status
+This is an updated fork of [pyre2](https://github.com/andreasvc/pyre2). It has built wheels for newer
+Python versions.
 
-.. image:: https://github.com/andreasvc/pyre2/workflows/Release/badge.svg
-    :target: https://github.com/andreasvc/pyre2/actions?query=workflow:Release
-    :alt: Release CI Status
-
-.. image:: https://img.shields.io/github/v/tag/andreasvc/pyre2?color=green&include_prereleases&label=latest%20release
-    :target: https://github.com/andreasvc/pyre2/releases
-    :alt: GitHub tag (latest SemVer, including pre-release)
-
-.. image:: https://badge.fury.io/py/pyre2.svg
-   :target: https://badge.fury.io/py/pyre2
-    :alt: Pypi version
-
-.. image:: https://github.com/andreasvc/pyre2/workflows/Conda/badge.svg
-    :target: https://github.com/andreasvc/pyre2/actions?query=workflow:Conda
-    :alt: Conda CI Status
-
-.. image:: https://img.shields.io/github/license/andreasvc/pyre2
-    :target: https://github.com/andreasvc/pyre2/blob/master/LICENSE
-    :alt: License
-
-.. image:: https://img.shields.io/badge/python-3.6+-blue.svg
-    :target: https://www.python.org/downloads/
-    :alt: Python version
-
-.. image:: https://anaconda.org/conda-forge/pyre2/badges/version.svg
-   :target: https://anaconda.org/conda-forge/pyre2
-   :alt: version
-
-.. image:: https://anaconda.org/conda-forge/pyre2/badges/platforms.svg
-   :target: https://anaconda.org/conda-forge/pyre2
-   :alt: platforms
-
-.. image:: https://anaconda.org/conda-forge/pyre2/badges/downloads.svg
-   :target: https://anaconda.org/conda-forge/pyre2
-   :alt: downloads
-
-
-.. contents:: Table of Contents
-   :depth: 2
-   :backlinks: top
-
+All docs below are taken from the pyre2 package.
 
 Summary
 =======
-
 pyre2 is a Python extension that wraps
 `Google's RE2 regular expression library <https://github.com/google/re2>`_.
 The RE2 engine compiles (strictly) regular expressions to
@@ -65,7 +22,7 @@ Installation
 
 Normal usage for Linux/Mac/Windows::
 
-  $ pip install pyre2
+  $ pip install pyre2-updated
 
 Compiling from source
 ---------------------
