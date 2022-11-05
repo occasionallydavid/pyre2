@@ -126,6 +126,6 @@ jobs:
       - uses: pypa/gh-action-pypi-publish@master
         if: ${{ github.actor == github.repository_owner && github.ref == 'refs/heads/master' }}
         with:
-          user: __token__
+          user: ${{ secrets.pypi_username }}
           password: ${{ secrets.pypi_password }}
           packages_dir: artifact/
